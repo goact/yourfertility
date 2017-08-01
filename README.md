@@ -19,11 +19,11 @@ chapter describes how authentication works and how access token is obtained.
 
 ## Resources
 
-### [User account resources](goact-api/3-UserResources.md)
+### [User account resources](goact-api/3-UserProfile.md)
 
 This chapter describes the resources for retrieving user data.
 
-### [User health resources](goact-api/4-UserHealthInformation.md)
+### [User health resources](goact-api/4-UserHealthInformation2.md)
 
 This chapter will describes the resources for retrieving user health data.
  
