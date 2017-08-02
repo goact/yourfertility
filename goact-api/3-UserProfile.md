@@ -1,6 +1,6 @@
 # User account related resources
  
-## 1. GET /mint/api/v1/user/:access_token
+## 1. GET /mint/api/v1/user/info/:access_token
 
 Return the current user profile data.
 
@@ -49,7 +49,7 @@ created | Timestamp of user creation
 updated | Timestamp of user profile update
 
 
-## 2. PUT /mint/api/v1/user/:access_token
+## 2. PUT /mint/api/v1/user/info/:access_token
 
 Update all or some of the fields in user profile.
 

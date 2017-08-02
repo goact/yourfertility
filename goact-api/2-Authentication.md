@@ -23,7 +23,7 @@ firstname | _User's first name_
 lastname | _User's last name_
 username | _User's username, typically the email address_
 password | _User's password, passwords length should be more than 5 characters_
-deviceid | _Device id for receiving notification Firebase notification(FCM)_ 
+deviceid | _Device id for receiving notification Firebase notification(FCM) or Web site url _  
 
 **Example Request**
 
