@@ -53,7 +53,16 @@ weight        | *Optional* Weight in kilograms
 height        | *Optional* Height in centimeters 
 created       | Timestamp of user creation
 updated       | Timestamp of user profile update
+ 
+ 
+**Errors**
 
+ HTTP Status |Error identifier  | Description
+-------------|------------------|------------
+200          |              404 | The requested resource was not found on server 
+200          |              400 | The request contained invalid data (a more detailed error description may be included).
+200          |              403 | The given authorization credentials were not valid for this resource. The request did not contain (correct) authorization credentials.
+200          |              500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
 
 
 
@@ -117,6 +126,16 @@ password      | *Optional* new password to change. Minimum length is 6. The clie
 created       | Timestamp of user creation
 updated       | Timestamp of user profile update
 
-  
+ 
+**Errors**
+
+ HTTP Status |Error identifier  | Description
+-------------|------------------|------------
+200          |              404 | The requested resource was not found on server 
+200          |              400 | The request contained invalid data (a more detailed error description may be included).
+200          |              403 | The given authorization credentials were not valid for this resource. The request did not contain (correct) authorization credentials.
+200          |              500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
+
+
 
 
