@@ -61,7 +61,7 @@ sign-up with different username again or log in with same username.
 
 **Example Error Response** 
 
-The following error case descriptions apply for all API URLs. 
+The following error case descriptions apply for this API URL. 
 
 ```javascript
 {
@@ -127,7 +127,7 @@ authenticate again.
 
 **Example Error Response** 
 
-The following error case descriptions apply for all API URLs. 
+The following error case descriptions apply for this API URL. 
 
 ```javascript
 {
@@ -144,7 +144,7 @@ The following error case descriptions apply for all API URLs.
 
 
 
-## 3. Extend user session time ( GET /mint/api/v1/auth/:access_token ) 
+## 3. Check user session time ( GET /mint/api/v1/auth/:access_token ) 
 
 Get information about the access token used in the request and extend user session time in goAct application.
 
@@ -187,7 +187,7 @@ authenticate again.
 
 **Example Error Response** 
 
-The following error case descriptions apply for all API URLs. 
+The following error case descriptions apply for this API URL. 
 
 ```javascript
 {
@@ -197,8 +197,9 @@ The following error case descriptions apply for all API URLs.
 ``` 
 
  HTTP Status |Error identifier | Description
--------------|-------------|------------
-200          | 404         | The requested resource was not found on server   
+-------------|-----------------|------------
+200          |             400 | The request contained invalid or expried 'access token' (a more detailed error description may be included).
+200          |             404 | The requested resource was not found on server   
 
 
 
@@ -250,7 +251,7 @@ returned. In this case, the client application should ask the user to enter corr
 
 **Example Error Response** 
 
-The following error case descriptions apply for all API URLs. 
+The following error case descriptions apply for this API URL. 
 
 ```javascript
 {

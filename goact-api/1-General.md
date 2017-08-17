@@ -37,6 +37,17 @@ unsupported_api_version | 410 | The version of API is no longer supported. You n
 server internal error   | 500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
 
 
+## Http status
+
+Common Http staus messages goAct application couldn't handle are listed in the table below. Error messages specific to
+particular resources are described in their own sections. 
+
+Http status | description
+------------|------------ 
+        404 | The requested resource was not found on server
+        500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
+
+
 ## Token types
 
 Backend supports two token types: application and user tokens.

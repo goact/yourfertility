@@ -1,6 +1,63 @@
 # User account related resources
+
+
+## 1. Attain Visitor ID  ( GET /mint/api/v1/user/visitorId )
+
+Return the unique visitor ID for anonymous user.
+This would be 'ID' for Analytics capture.
+
+### Request 
+
+**Authentication**
  
-## 1. Access User profile  ( GET /mint/api/v1/user/info/:access_token )
+Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+
+**Example Request** 
+
+```sh
+curl -i -H "Content-Type: application/json" -H "Authorization: ApplicationToken 1YotnFZsEjr1zCsicMWpAAFSa" -X GET  https://test.goact.co/mint/api/v1/user/visitorId
+```
+
+
+### Response
+
+**Example Response**
+
+```javascript
+{  
+  "visitorid" : "dbd4bc88-7f44-4cd7-b9f6-06db922e36c2" 
+}
+```
+ 
+**Fields** 
+
+Fields that belong to the user account
+
+Field         | Description
+--------------|-------- 
+visitorid     | User's visitor ID **Must not be null**  
+ 
+**Example Error Response** 
+
+The following error case descriptions apply for this API URL. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+``` 
+
+ HTTP Status |Error identifier  | Description
+-------------|------------------|------------
+200          |              404 | The requested resource was not found on server 
+200          |              403 | The given authorization credentials were not valid for this resource. The request did not contain (correct) authorization credentials.
+200          |              500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
+
+
+
+
+## 2. Access User profile  ( GET /mint/api/v1/user/info/:access_token )
 
 Return the current user profile data.
 
@@ -57,7 +114,7 @@ updated       | Timestamp of user profile update
  
 **Example Error Response** 
 
-The following error case descriptions apply for all API URLs. 
+The following error case descriptions apply for this API URL. 
 
 ```javascript
 {
@@ -75,7 +132,7 @@ The following error case descriptions apply for all API URLs.
 
 
 
-## 2. Update User profile ( PUT /mint/api/v1/user/info/:access_token)
+## 3. Update User profile ( PUT /mint/api/v1/user/info/:access_token)
 
 Update all or some of the fields in user profile.
 
@@ -138,7 +195,7 @@ updated       | Timestamp of user profile update
  
 **Example Error Response** 
 
-The following error case descriptions apply for all API URLs. 
+The following error case descriptions apply for this API URL. 
 
 ```javascript
 {
