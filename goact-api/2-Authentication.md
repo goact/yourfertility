@@ -59,8 +59,17 @@ returned. In this case, the client application should ask the user to
 sign-up with different username again or log in with same username.
 
 
-**Errors**
+**Example Error Response** 
 
+The following error case descriptions apply for all API URLs. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+```
+ 
  HTTP Status| Error identifier | Description
 ------------|------------------|------------
 200         | 403              | The username has already existed
@@ -116,7 +125,16 @@ returned. In this case, the client application should ask the user to
 authenticate again.
 
 
-**Errors**
+**Example Error Response** 
+
+The following error case descriptions apply for all API URLs. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+``` 
 
  HTTP Status |Error identifier | Description
 -------------|-------------|------------
@@ -167,7 +185,16 @@ returned. In this case, the client application should ask the user to
 authenticate again.
 
 
-**Errors**
+**Example Error Response** 
+
+The following error case descriptions apply for all API URLs. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+``` 
 
  HTTP Status |Error identifier | Description
 -------------|-------------|------------
@@ -221,7 +248,16 @@ If the username hasn't existed, 'Error identifier ' 404 error is
 returned. In this case, the client application should ask the user to enter correct username again.
 
 
-**Errors**
+**Example Error Response** 
+
+The following error case descriptions apply for all API URLs. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+``` 
 
 HTTP Status | Error identifier  | Description
 ------------|-------------------|------------

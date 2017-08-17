@@ -55,7 +55,16 @@ created       | Timestamp of user creation
 updated       | Timestamp of user profile update
  
  
-**Errors**
+**Example Error Response** 
+
+The following error case descriptions apply for all API URLs. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+``` 
 
  HTTP Status |Error identifier  | Description
 -------------|------------------|------------
@@ -127,7 +136,16 @@ created       | Timestamp of user creation
 updated       | Timestamp of user profile update
 
  
-**Errors**
+**Example Error Response** 
+
+The following error case descriptions apply for all API URLs. 
+
+```javascript
+{
+    "error" : "error_identifier_string",
+    "description" : "Human readable description of the error"
+}
+``` 
 
  HTTP Status |Error identifier  | Description
 -------------|------------------|------------
