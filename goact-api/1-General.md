@@ -1,7 +1,7 @@
 # General
 
 The API is hosted in address test.goact.co, and all requests require HTTPS
-protocol, so each resource address starts with **https://test.goact.co/mint/**.
+protocol, so each resource address starts with **https://{subdomain}.goact.co/mint/**.
 
 ## Conventions for responses
 
@@ -28,7 +28,7 @@ and human readable description:
 Common error messages are listed in the table below. Error messages specific to
 particular resources are described in their own sections.
 
-Error identifier | HTTP Status | Description
+Error identifier | error | description
 -----------------|-------------|------------
 not_found               | 404 | The requested resource was not found on server
 bad_request             | 400 | The request contained invalid data (a more detailed error description may be included).
@@ -58,8 +58,7 @@ below. Token is provided in the request uri in following format:
 
 ``` 
 /mint/api/v1/auth/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
-/mint/api/v1/user/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
-/mint/api/v1/sleep/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
-/mint/api/v1/sleep/summary/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
+/mint/api/v1/user//info/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
+/mint/api/v1/health/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2 
 ```
 
