@@ -18,7 +18,7 @@ This flow is used in a case when the end user sign up with the web app in yourfe
 
 **Authentication**
 
-goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
 
 **Example Request**
 
@@ -75,7 +75,7 @@ This flow is used in a case where the end user has trusted her password with you
 
 **Authentication** 
 
-goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
 
 **Example Request**
 
@@ -124,7 +124,58 @@ authenticate again.
 200          | 404         | The password does not match, suggest reset? 
 
 
-## 3. User request new password ( POST /mint/api/v1/auth/request_new_password )
+
+
+## 3. Extend user session time ( GET /mint/api/v1/auth/:access_token ) 
+
+Get information about the access token used in the request and extend user session time in goAct application.
+
+### Request  
+
+**Authentication** 
+
+Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+
+**Example Request**
+
+```sh
+curl -i -H "Content-Type: application/json" -H "Authorization: ApplicationToken 1YotnFZsEjr1zCsicMWpAAFSa" -X GET https://test.goact.co/mint/api/v1/auth/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
+```
+
+### Response
+
+**Example Response**
+
+```javascript
+{ 
+    "user" : 1231,
+    "access_token" : "2YotnFZFEjr1zCsicMWpAA",
+    "token_type" : "user", 
+    "expires_in" : 3600
+}
+```
+
+Property     | Meaning
+-------------|--------  
+user         | Id of the associated user. This would be 'vistor id' for Analytics capture.
+token_type   | The token type, currently supported type is "user"
+access_token | The access token to be used in URI of the requests. This token should be set to web browser for _exprires_in_ in order for web-tool to access to goAct APIs. 
+expires_in   | *Optional* In how many seconds the token expires. If missing, the token is not set to expire.
+
+If the token is already expired, or otherwise cancelled, 'Error identifier' 404 error is
+returned. In this case, the client application should ask the user to
+authenticate again.
+
+
+**Errors**
+
+ HTTP Status |Error identifier | Description
+-------------|-------------|------------
+200          | 404         | The requested resource was not found on server   
+
+
+
+## 4. User request new password ( POST /mint/api/v1/auth/request_new_password )
 
 This flow is used in a case when the end user request new password in the yourfertility.org.au . 
 
@@ -132,7 +183,7 @@ This flow is used in a case when the end user request new password in the yourfe
 
 **Authentication** 
 
-goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs . 
+Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
 
 **Example Request**
 
