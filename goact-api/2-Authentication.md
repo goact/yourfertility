@@ -10,13 +10,11 @@ Instead, you exchange them to the access token, which is used to authenticate
 all requests.
 
 
-## 1. User registration 
+## 1. User registration (POST /mint/api/v1/auth/register)
 
 This flow is used in a case when the end user sign up with the web app in yourfertilyt.org.au . 
-
-### POST /mint/api/v1/auth/register
-
-** 1.1 Request** 
+  
+### Request 
 
 **Authentication**
 
@@ -36,7 +34,7 @@ lastname   | _User's last name_
 username   | _User's username, typically the email address_
 password   | _User's password, passwords length should be more than 5 characters_
  
-** 1.2 Response** 
+### Response 
 
 **Example Response**
 
@@ -69,13 +67,11 @@ sign-up with different username again or log in with same username.
 
  
 
-##  2. User authentication 
+##  2. User authentiction (POST /mint/api/v1/auth/authorize) 
 
 This flow is used in a case where the end user has trusted her password with yourfertilyt.org.au. 
 
-### POST /mint/api/v1/auth/authorize
-
-** 2.1 Request** 
+### Request
 
 **Authentication** 
 
@@ -95,7 +91,7 @@ username               | _User's username, typically the email address_
 password               | _User's password_
 
 
-** 2.2 Response**  
+### Response
 
 **Example Response**
 
@@ -128,13 +124,11 @@ authenticate again.
 200          | 404         | The password does not match, suggest reset? 
 
 
-## 3. User request new password 
+## 3. User request new password ( POST /mint/api/v1/auth/request_new_password )
 
 This flow is used in a case when the end user request new password in the yourfertility.org.au . 
 
-### POST /mint/api/v1/auth/request_new_password
- 
-** 3.1 Request**  
+### Request  
 
 **Authentication** 
 
@@ -152,7 +146,7 @@ grant_type             | reset
 username               | _User's username, typically the email address_ 
 
 
-** 3.2 Response**  
+### Response  
 
 **Example Response**
 
