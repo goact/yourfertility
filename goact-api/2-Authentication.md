@@ -16,7 +16,7 @@ This flow is used in a case when the end user sign up with the web app in yourfe
 
 ### POST /mint/api/v1/auth/register
 
-#### Request
+** 1.1 Request** 
 
 **Authentication**
 
@@ -35,8 +35,8 @@ firstname  | _User's first name_
 lastname   | _User's last name_
 username   | _User's username, typically the email address_
 password   | _User's password, passwords length should be more than 5 characters_
-
-#### Response
+ 
+** 1.2 Response** 
 
 **Example Response**
 
@@ -75,7 +75,7 @@ This flow is used in a case where the end user has trusted her password with you
 
 ### POST /mint/api/v1/auth/authorize
 
-#### Request
+** 2.1 Request** 
 
 **Authentication** 
 
@@ -94,7 +94,8 @@ grant_type             | password
 username               | _User's username, typically the email address_
 password               | _User's password_
 
-#### Response
+
+** 2.2 Response**  
 
 **Example Response**
 
@@ -132,8 +133,8 @@ authenticate again.
 This flow is used in a case when the end user request new password in the yourfertility.org.au . 
 
 ### POST /mint/api/v1/auth/request_new_password
-
-#### Request
+ 
+** 3.1 Request**  
 
 **Authentication** 
 
@@ -150,7 +151,8 @@ application/json field | Value
 grant_type             | reset 
 username               | _User's username, typically the email address_ 
 
-#### Response
+
+** 3.2 Response**  
 
 **Example Response**
 
