@@ -42,10 +42,10 @@ server internal error   |   500 | The server encountered an internal error or mi
 Common Http staus messages goAct application couldn't handle are listed in the table below. Error messages specific to
 particular resources are described in their own sections. 
 
-Http status | description |  
+Http status | description |  a
 ----|---------------------|---
-404 | The requested resource was not found on server
-500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
+404 | The requested resource was not found on server|
+500 | The server encountered an internal error or misconfiguration and was unable to complete your request.|
 
 
 ## Token types
