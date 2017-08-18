@@ -28,13 +28,13 @@ and human readable description:
 Common error messages are listed in the table below. Error messages specific to
 particular resources are described in their own sections.
 
-Error identifier | error | description
------------------|-------------|------------
-not_found               | 404 | The requested resource was not found on server
-bad_request             | 400 | The request contained invalid data (a more detailed error description may be included).
-forbidden               | 403 | The given authorization credentials were not valid for this resource. The request did not contain (correct) authorization credentials.
-unsupported_api_version | 410 | The version of API is no longer supported. You need you notify user to upgrade the client app.
-server internal error   | 500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
+Error identifier        | error | description
+------------------------|-------|------------
+not_found               |   404 | The requested resource was not found on server
+bad_request             |   400 | The request contained invalid data (a more detailed error description may be included).
+forbidden               |   403 | The given authorization credentials were not valid for this resource. The request did not contain (correct) authorization credentials.
+unsupported_api_version |   410 | The version of API is no longer supported. You need you notify user to upgrade the client app.
+server internal error   |   500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
 
 
 ## Http status
@@ -43,7 +43,7 @@ Common Http staus messages goAct application couldn't handle are listed in the t
 particular resources are described in their own sections. 
 
 Http status | description
-------------|------------ 
+------------|-------------
         404 | The requested resource was not found on server
         500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
 
