@@ -1,13 +1,10 @@
-# goACT webservice API documentation (Beta)
-
-[goAct](http://www.goact.co) is [description for goAct].
-
-When a goAct user signs into [description of Webservice].
-
-You can use the following assets:
+# [goAct](http://www.goact.co) webservice API documentation (Beta)
+ 
 
 ![goAct logo](goact-api/images/goact_logo.png)
   
+You can use the following assets:
+
 ## [General](goact-api/1-General.md)
 
 Documents the general conventions used throughout the API.
