@@ -44,8 +44,8 @@ particular resources are described in their own sections.
 
 Http status | description
 ------------|-------------
-        404 | The requested resource was not found on server
-        500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
+404 | The requested resource was not found on server
+500 | The server encountered an internal error or misconfiguration and was unable to complete your request.
 
 
 ## Token types
