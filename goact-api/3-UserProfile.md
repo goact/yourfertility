@@ -10,7 +10,7 @@ This would be 'ID' for Analytics capture.
 
 **Authentication**
  
-Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+Request must be authenticated by Application specific token. goAct provides the 'ApplicationToken' for the frontend to access APIs .
 
 **Example Request** 
 
@@ -65,7 +65,7 @@ Return the current user profile data.
 
 **Authentication**
  
-Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+Request must be authenticated by Application specific token. goAct provides the 'ApplicationToken' for the frontend to access APIs .
 
 **Example Request** 
 
@@ -143,7 +143,7 @@ Fields can be removed (cleared) by setting a field value to null in the request.
 
 **Authentication**
  
-Request must be authenticated by Application specific token. goAct providers 'ApplicationToken' for yourfertilyt.org.au to access APIs .
+Request must be authenticated by Application specific token. goAct provides the 'ApplicationToken' for the frontend to access APIs .
 
 **Example Request** 
 
@@ -153,7 +153,7 @@ curl -i -H "Content-Type: application/json" -H "Authorization: ApplicationToken 
 
 ### Response
 
-Fields that requested will be returned with. 
+Fields that are requested will be returned. 
 Returns the updated user profile, see PUT request.
 
 **Example Response**
@@ -185,10 +185,10 @@ username      | *Optional* User's email address. **Must not be null**
 firstname     | *Optional* User's firstname.
 lastname      | *Optional* User's lastname.
 date_of_birth | *Optional* User's date of birth.
-sex           | *Optional* Biological sex. Choises are "M", "F", and null.
+sex           | *Optional* Biological sex. Choices are "M", "F", and null.
 weight        | *Optional* Weight in kilograms
 height        | *Optional* Height in centimeters 
-password      | *Optional* new password to change. Minimum length is 6. The client app should confirmed that new password is correct by double checking.   
+password      | *Optional* new password to change. Minimum length is 6. The client app should confirm that new password is correct by double checking.   
 created       | Timestamp of user creation
 updated       | Timestamp of user profile update
 

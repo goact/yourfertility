@@ -3,12 +3,12 @@
 
 ## 1. POST /mint/api/v1/user/health/:visitor_id
 
-Store Persional Health Information(PHI) fields into database.
-This api should be call when user logged in and access to monitor page.
+Store Persional Health Information (PHI) fields into the goAct database.
+This api should be called when a user has logged in.
 
 ### Authentication
 
-Request must be authenticated by Application specific token.
+Request must be authenticated by an Application specific token.
 
 ### Example Request
 
@@ -72,15 +72,15 @@ healthyBaby | Response for Have you previously had a healthy baby?
 sti | Response for Have you been tested for Sexually Transmitted Infections (STI)?
 stiPositive | *Optional* Response for Did you test positive for an STI? 
 menstruation | *Optional* Response for Are you having fewer than 9 menstrual cycles per year or menstrual cycles longer than 35 days?
-havingSex | Response for How often are you having sex during a given month?
+havingSex | Response for How often you have sex during a given month?
 havingSexMultiple | Response for Are you having sex multiple times at the right time of the month? 
-contraception | Response forAre you currently using contraception?
+contraception | Response for Are you currently using contraception?
 contraception | Response for Do you have any of the following medical conditions?
 
 ## 2. GET /mint/api/v1/user/health/:access_token
 
-Fetch Persional Health Information(PHI) fields from goAct database.
-This api should be call when user logged in and access to monitor page.
+Fetch Persional Health Information (PHI) fields from the goAct database.
+This API should be call when a user is logged in.
 
 ### Authentication
 
@@ -91,7 +91,7 @@ Request must be authenticated by Application specific token.
 ```sh
 curl -i -H "Content-Type: application/json" -H "Authorization: ApplicationToken 1YotnFZsEjr1zCsicMWpAAFSa" -X GET https://test.goact.co/mint/api/v1/health/dbd4bc88-7f44-4cd7-b9f6-06db922e36c2
 ```
-### Example Response 1 if user has previous health information in goAct database.
+### Example Response 1 if user has previous health information in the goAct database.
 
 ```javascript
 {     
@@ -136,7 +136,7 @@ curl -i -H "Content-Type: application/json" -H "Authorization: ApplicationToken 
 }
 ```
 
-### Example Response 2 if user hasn't have previous health information in goAct database yet.
+### Example Response 2 if user doesn't have previous health information in the goAct database yet.
 
 ```javascript
 { 
@@ -166,9 +166,9 @@ healthyBaby | Response for Have you previously had a healthy baby?
 sti | Response for Have you been tested for Sexually Transmitted Infections (STI)?
 stiPositive | *Optional* Response for Did you test positive for an STI? 
 menstruation | *Optional* Response for Are you having fewer than 9 menstrual cycles per year or menstrual cycles longer than 35 days?
-havingSex | Response for How often are you having sex during a given month?
+havingSex | Response for How often are you have sex during a given month?
 havingSexMultiple | Response for Are you having sex multiple times at the right time of the month? 
-contraception | Response forAre you currently using contraception?
+contraception | Response for Are you currently using contraception?
 contraception | Response for Do you have any of the following medical conditions?
 
 

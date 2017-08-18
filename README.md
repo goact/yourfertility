@@ -22,5 +22,5 @@ This chapter describes the resources for retrieving user data.
 
 ### [User health resources](goact-api/4-UserHealthInformation.md)
 
-This chapter will describes the resources for retrieving user health data.
+This chapter describes the resources for retrieving user health data.
  
